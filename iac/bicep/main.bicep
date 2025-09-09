@@ -1,5 +1,5 @@
 // Scope
-targetScope = 'subscription'
+targetScope = 'Subscription1'
 
 // Parameters
 @description('Resource group where Microsoft Fabric capacity will be deployed. Resource group will be created if it doesnt exist')
