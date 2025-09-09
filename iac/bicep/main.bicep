@@ -6,7 +6,7 @@ targetScope = 'subscription'
 param dprg string= 'rg-fabric'
 
 @description('Microsoft Fabric Resource group location')
-param rglocation string = 'australiaeast'
+param rglocation string = 'canadacentral'
 
 @description('Email of Fabric Capacity Administrator')
 param fabric_capacity_admin_email string
@@ -17,7 +17,7 @@ param cost_centre_tag string = 'MCAPS'
 @description('System Owner tag that will be applied to all resources in this deployment')
 param owner_tag string = 'whirlpool@contoso.com'
 
-@description('Subject Matter EXpert (SME) tag that will be applied to all resources in this deployment')
+@description('Subject Matter Expert (SME) tag that will be applied to all resources in this deployment')
 param sme_tag string ='sombrero@contoso.com'
 
 @description('Timestamp that will be appendedto the deployment name')
@@ -62,6 +62,6 @@ module fabric_capacity './modules/fabric-capacity.bicep' = {
     owner_tag: owner_tag
     sme_tag: sme_tag
     adminUsers: fabric_capacity_admin_email
-    skuName: 'F4' // Default Fabric Capacity SKU F2
+    skuName: 'F2' // Default Fabric Capacity SKU F2
   }
 }
