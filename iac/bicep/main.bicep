@@ -8,8 +8,8 @@ param dprg string= 'rg-fabric'
 @description('Microsoft Fabric Resource group location')
 param rglocation string = 'canadacentral'
 
-//@description('Email of Fabric Capacity Administrator')
-//param fabric_capacity_admin_email string
+@description('Email of Fabric Capacity Administrator')
+param fabric_capacity_admin_email string
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
 param cost_centre_tag string = 'MCAPS'
@@ -54,16 +54,16 @@ module kv './modules/keyvault.bicep' = {
 }
 
 //Deploy Microsoft Fabric Capacity
-//module fabric_capacity './modules/fabric-capacity.bicep' = {
-//  name: fabric_deployment_name
-//  scope: fabric_rg
-//  params:{
-//    fabric_name: 'bafabric01'
-//    location: fabric_rg.location
-//    cost_centre_tag: cost_centre_tag
-//    owner_tag: owner_tag
-//    sme_tag: sme_tag
-//    adminUsers: fabric_capacity_admin_email
-//    skuName: 'F2' // Default Fabric Capacity SKU F2
-//  }
-//}
+module fabric_capacity './modules/fabric-capacity.bicep' = {
+  name: fabric_deployment_name
+  scope: fabric_rg
+  params:{
+    fabric_name: 'bafabric01'
+    location: fabric_rg.location
+    cost_centre_tag: cost_centre_tag
+    owner_tag: owner_tag
+    sme_tag: sme_tag
+    adminUsers: fabric_capacity_admin_email
+    skuName: 'F2' // Default Fabric Capacity SKU F2
+  }
+}
