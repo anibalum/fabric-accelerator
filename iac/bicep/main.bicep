@@ -15,10 +15,12 @@ param fabric_capacity_admin_email string
 param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'admin@anibalumhotmail.onmicrosoft.com'
+param owner_tag string = 'anibal.um@hotmail.com'
+//param owner_tag string = 'admin@anibalumhotmail.onmicrosoft.com'
 
 @description('Subject Matter Expert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='admin@anibalumhotmail.onmicrosoft.com'
+param sme_tag string ='anibal.um@hotmail.com'
+//param sme_tag string ='admin@anibalumhotmail.onmicrosoft.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
@@ -52,16 +54,16 @@ module kv './modules/keyvault.bicep' = {
 }
 
 //Deploy Microsoft Fabric Capacity
-module fabric_capacity './modules/fabric-capacity.bicep' = {
-  name: fabric_deployment_name
-  scope: fabric_rg
-  params:{
-    fabric_name: 'bafabric01'
-    location: fabric_rg.location
-    cost_centre_tag: cost_centre_tag
-    owner_tag: owner_tag
-    sme_tag: sme_tag
-    adminUsers: fabric_capacity_admin_email
-    skuName: 'F2' // Default Fabric Capacity SKU F2
-  }
-}
+//module fabric_capacity './modules/fabric-capacity.bicep' = {
+//  name: fabric_deployment_name
+//  scope: fabric_rg
+//  params:{
+//    fabric_name: 'bafabric01'
+//    location: fabric_rg.location
+//    cost_centre_tag: cost_centre_tag
+//    owner_tag: owner_tag
+//    sme_tag: sme_tag
+//    adminUsers: fabric_capacity_admin_email
+//    skuName: 'F2' // Default Fabric Capacity SKU F2
+//  }
+//}
