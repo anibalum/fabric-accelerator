@@ -23,7 +23,7 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         scope: subscription
-        region: australiaeast
+        region: canadacentral
         subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
         template: iac/bicep/main.bicep
         parameters: 'fabric_capacity_admin_email=${{ secrets.FABRIC_CAPACITY_ADMIN_EMAIL }}'
