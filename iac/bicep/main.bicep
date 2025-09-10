@@ -15,10 +15,10 @@ param fabric_capacity_admin_email string
 param cost_centre_tag string = 'MCAPS'
 
 @description('System Owner tag that will be applied to all resources in this deployment')
-param owner_tag string = 'anibal.um@hotmail.com'
+param owner_tag string = 'admin@anibalumhotmail.onmicrosoft.com'
 
 @description('Subject Matter Expert (SME) tag that will be applied to all resources in this deployment')
-param sme_tag string ='anibal.um@hotmail.com'
+param sme_tag string ='admin@anibalumhotmail.onmicrosoft.com'
 
 @description('Timestamp that will be appendedto the deployment name')
 param deployment_suffix string = utcNow()
