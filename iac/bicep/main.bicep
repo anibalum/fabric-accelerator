@@ -8,8 +8,8 @@ param dprg string= 'rg-fabric'
 @description('Microsoft Fabric Resource group location')
 param rglocation string = 'canadacentral'
 
-@description('Email of Fabric Capacity Administrator')
-param fabric_capacity_admin_email string
+//@description('Email of Fabric Capacity Administrator')
+//param fabric_capacity_admin_email string
 
 @description('Cost Centre tag that will be applied to all resources in this deployment')
 param cost_centre_tag string = 'MCAPS'
